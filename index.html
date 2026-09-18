@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ShopGrid | Product Listing</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Shop<span>Grid</span>
+        </div>
+
+        <div class="cart">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </div>
+
+    </header>
+
+
+    <section class="hero">
+
+        <p>
+            PRODUCT MARKETPLACE
+        </p>
+
+        <h1>
+            Find Products<br>
+            You'll Love
+        </h1>
+
+        <span>
+            Filter and sort products to find exactly what you need.
+        </span>
+
+    </section>
+
+
+    <main class="shop">
+
+        <aside class="filters">
+
+            <h2>
+                Filters
+            </h2>
+
+
+            <div class="filter-group">
+
+                <h3>
+                    Search
+                </h3>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <h3>
+                    Category
+                </h3>
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="electronics">
+                        Electronics
+                    </option>
+
+                    <option value="fashion">
+                        Fashion
+                    </option>
+
+                    <option value="home">
+                        Home
+                    </option>
+
+                    <option value="accessories">
+                        Accessories
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <h3>
+                    Maximum Price
+                </h3>
+
+                <input
+                    type="range"
+                    id="priceRange"
+                    min="20"
+                    max="1500"
+                    value="1500"
+                >
+
+                <div class="price-value">
+                    Up to ₹<span id="priceValue">1500</span>
+                </div>
+
+            </div>
+
+
+            <button
+                id="clearFilters"
+                class="clear-button"
+            >
+                Clear Filters
+            </button>
+
+        </aside>
+
+
+        <section class="products-area">
+
+            <div class="products-header">
+
+                <div>
+
+                    <h2>
+                        Products
+                    </h2>
+
+                    <span id="resultCount">
+                        0 products
+                    </span>
+
+                </div>
+
+
+                <select id="sortSelect">
+
+                    <option value="default">
+                        Sort: Recommended
+                    </option>
+
+                    <option value="price-low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price-high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="rating-high">
+                        Rating: High to Low
+                    </option>
+
+                    <option value="name">
+                        Name: A to Z
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="productGrid"
+                class="product-grid"
+            ></div>
+
+
+            <div
+                id="noResults"
+                class="no-results"
+            >
+
+                <div>🔎</div>
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try changing your filters.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        ShopGrid • Task 4 Product Listing
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
